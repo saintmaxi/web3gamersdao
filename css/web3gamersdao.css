@@ -62,11 +62,13 @@ html, body {
 }
 
 h1, h2 {
+	font-family: "Roboto Black", monospace;
 	letter-spacing: 3px;
 }
 
 h1 {
-	font-family: "Roboto", monospace;
+	font-family: "Roboto Black", monospace;
+	text-align: center;
 	color: white;
 	font-weight: 600;
 	font-size: 3vw !important;
@@ -76,20 +78,6 @@ h1 {
 p {
 	font-size: 1.4vw !important;
 	line-height: 1.7vw !important;
-}
-
-#desktop-wallet-connect-div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 23%;
-	margin-left: 5%;
-}
-
-#desktop-wallet-connect-div button {
-	width: 48%;
-	font-size: 1vw;
-	letter-spacing: 1px;
 }
 
 #discord-img {
@@ -465,8 +453,8 @@ h5 {
 	}
 
 	.section {
-		padding-top: 0px;
-		padding-bottom: 15px !important;
+		padding-top: 25px;
+		padding-bottom: 25px !important;
 	}
 
 

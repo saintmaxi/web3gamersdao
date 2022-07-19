@@ -1,0 +1,17 @@
+#mint-section {
+    width: 100vw;
+    height: 100vh;
+}
+
+#mint-frame {
+    min-height:80%;
+    min-width: 50%;
+}
+
+@media screen and (max-width: 991px) {
+
+    #mint-frame {
+        min-height:100%;
+        min-width: 100%;
+    }
+}
