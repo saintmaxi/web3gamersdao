@@ -41,6 +41,10 @@
   animation-delay: 0.3s;
 }
 
+#whitelisted {
+  font-family: "Roboto Light";
+}
+
 @-webkit-keyframes dot {
   0% {
     opacity: 0;
