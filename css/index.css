@@ -9,12 +9,7 @@
 }
 
 @font-face {  
-	font-family: 'SPLASH';
-	src: URL('./no-continue.regular.ttf') format('truetype');
-}  
-
-@font-face {  
-	font-family: 'Roboto';
+	font-family: 'Roboto Light';
 	src: URL('./roboto.light.ttf') format('truetype');
 }  
 
@@ -22,6 +17,16 @@
 	font-family: 'Roboto Black';
 	src: URL('./roboto.black.ttf') format('truetype');
 }  
+
+@-webkit-keyframes fade-in {
+    0% { opacity: 0;} 
+   100% { opacity: 1;} 
+}
+  
+@keyframes fade-in {
+    0% { opacity: 0;} 
+   100% { opacity: 1;} 
+}
 
 #splash-section {
     text-align: right;
@@ -41,6 +46,8 @@
 }
 
 #splash-text {
+    /* -webkit-animation: fade-in 1.5s linear;
+    animation: fade-in 1.5s linear; */
     font-size: 11vw !important;
     line-height: 11vw !important;
     font-family: "Roboto Black";
@@ -50,7 +57,7 @@
 
 #main-description {
     font-size: 3.4vh !important;
-    line-height: 3.6vh !important;
+    line-height: 4vh !important;
     text-align: center;
     width: 90%;
     margin: auto !important;
@@ -98,6 +105,11 @@
     border-radius: 25px;
     padding: .5vw;
     border: solid 1px yellow;
+	font-family: "Roboto Light" !important;
+}
+
+.team-member a button:hover {
+    background-color: #EC003B !important;
 }
 
 
@@ -127,7 +139,7 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     height: 9vh;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Light', sans-serif;
 }
 
 #test h2 {

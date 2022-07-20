@@ -1,0 +1,38 @@
+#info-section {
+    text-align: center;
+}
+
+#back {
+    width: 4%;
+}
+
+#back:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#info-div {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+
+h2 {
+    color: yellow;
+}
+
+@media screen and (max-width: 991px) {
+
+    #back {
+        width: 10%;
+    }
+
+    #info-div {
+        width: 85%;
+    }
+
+    #info-div p{
+        padding: 0 !important;
+    }
+
+}
