@@ -248,7 +248,7 @@ p {
 }
 
 .button:hover {
-  background-color: rgba(240, 55, 98, 0.849) !important;
+  background-color: #cb2f53 !important;
   color: white !important;
 }
 
@@ -443,8 +443,6 @@ h5 {
   padding: 20px;
   background-color: #100c08;
   opacity: 0.9;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 
 .box2 {

@@ -121,7 +121,6 @@ const getMerkleProof = async () => {
 const checkWhitelistStatus = async () => {
     const merkleProof = await getMerkleProof();
     const userAddress = await getAddress();
-    console.log(WHITELIST_STAGE, userAddress, MAX_WL, merkleProof, MAX_WL);
     const isWhitelisted = await nft
         .verifyClaimMerkleProof(WHITELIST_STAGE, userAddress, MAX_WL, merkleProof, MAX_WL)
         .catch((err) => console.log(err));

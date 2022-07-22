@@ -76,12 +76,77 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+#mint-bg {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#mint-bg img {
+  width: 12%;
+  margin: 0.15%;
+  opacity: 0.2;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.18;
+  }
+  80% {
+    opacity: 0.24;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.18;
+  }
+  80% {
+    opacity: 0.24;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.flicker1 {
+  animation: flicker 1.6s cubic-bezier(0.86, 0, 0.07, 1) infinite alternate;
+  -webkit-animation: flicker 1.6s cubic-bezier(0.86, 0, 0.07, 1) infinite
+    alternate;
+}
+
+.flicker2 {
+  animation: flicker 1.6s cubic-bezier(0.86, 0, 0.07, 1) infinite reverse;
+  -webkit-animation: flicker 1.6s cubic-bezier(0.86, 0, 0.07, 1) infinite
+    reverse;
 }
 
 #mint {
   margin: 0;
   width: 40%;
-  background-color: black;
+  background-color: transparent;
 }
 
 #mint-container h1 {
@@ -151,11 +216,16 @@
 /* end minting styling */
 
 @media screen and (max-width: 991px) {
+  #mint-bg img {
+    width: 24%;
+    margin: 0.15%;
+  }
+
   /* start minting styling */
 
   #mint-container {
     height: initial;
-    display: initial;
+    flex-direction: column;
   }
 
   #mint-container h1 {
