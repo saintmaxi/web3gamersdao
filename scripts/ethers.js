@@ -72,13 +72,6 @@ async function onConnect() {
         ethersProvider = new ethers.providers.Web3Provider(connection);
         signer = ethersProvider.getSigner();
         nft = new ethers.Contract(nftAddress, nftAbi(), signer);
-        ethersProvider.on("network", async (newNetwork, oldNetwork) => {
-            if (oldNetwork) {
-                $("#refresh-notification").remove();
-                await updateCurrentChain();
-                await updateMintInfo();
-            }
-        });
     }
     catch (e) {
         console.log("Could not get a wallet connection", e);
