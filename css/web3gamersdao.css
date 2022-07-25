@@ -324,7 +324,7 @@ h5 {
 #error-popup,
 #status-popup,
 #discord-popup {
-  background-color: #100c08;
+  background-color: black;
   z-index: 99999;
   position: fixed;
   top: 50%;
