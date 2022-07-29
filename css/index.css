@@ -42,10 +42,10 @@
   height: 100vh;
   border-bottom: solid 5px white;
   position: relative;
-  /* background-image: url("../images/splash.png"); */
+  background-image: url("../images/splash1.png");
   /* background-repeat: no-repeat; */
   /* background-position: center; */
-  /* background-size: cover; */
+  background-size: contain;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -54,7 +54,8 @@
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    /* bottom, image */ url(../images/splash.png);
+    /* bottom, image */ url(../images/splash1.png);
+  background-size: 100% 100%;
 }
 
 #splash-img {
@@ -78,6 +79,12 @@
   z-index: 99;
 } */
 
+#splash-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 #splash-text {
   /* -webkit-animation: fade-in 1.5s linear;
     animation: fade-in 1.5s linear; */
@@ -86,6 +93,7 @@
   font-family: "Roboto Black";
   letter-spacing: 0.5px;
   text-align: right;
+  text-align: left;
 }
 
 .splash-text-accent {
@@ -266,7 +274,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: right;
+  justify-content: left;
   margin-right: 4%;
 }
 
@@ -413,12 +421,18 @@
 
 @media screen and (max-width: 991px) {
   #splash-section {
+    background-size: 100% 100% !important;
+
     background:
         /* top, transparent black, faked with gradient */ linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
       ),
-      /* bottom, image */ url(../images/splash-mobile.png);
+      /* bottom, image */ url(../images/splash1-mobile.png);
+  }
+
+  #splash-info {
+    position: initial;
   }
 
   #splash-img {
@@ -430,6 +444,7 @@
     line-height: 12vw !important;
     font-family: "Roboto Black";
     letter-spacing: 0.5px;
+    text-align: right;
   }
 
   #button-div button {
