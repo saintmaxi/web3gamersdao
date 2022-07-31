@@ -41,9 +41,9 @@ const looksrareLink = "#";
 
 /*********************************END CONFIG************************************/
 
-if (window.ethereum == undefined) {
-    displayErrorMessage("Use a web3 enabled browser to mint!");
-}
+// if (window.ethereum == undefined) {
+//     displayErrorMessage("Use a web3 enabled browser to mint!");
+// }
 
 const getAddress = async () => {
     return await signer.getAddress();
