@@ -252,8 +252,11 @@ const allowlistMint = async () => {
             await displayErrorMessage(`Error: Not on allowlist!`);
         } else if (error.message.includes("Already minted free")) {
             await displayErrorMessage(`Error: Already claimed allowlist!`);
-        } else if (error.message.includes("denied transaction")) {
-            console.log("Tx denied by user");
+        } else if ((error.message).includes("User denied transaction signature")) {
+            console.log("Transaction rejected.");
+        }
+        else if ((error.message).includes("User rejected the transaction")) {
+            console.log("Transaction rejected.");
         } else if (error.message.includes("insufficient funds")) {
             await displayErrorMessage(`Error: Insuffient ETH to mint!`);
         }
@@ -322,9 +325,14 @@ const publicMint = async () => {
             await displayErrorMessage(
                 `Error: Public mint sold out! Remaining are for team and allowlist.`
             );
-        } else if (error.message.includes("denied transaction")) {
-            console.log("Tx denied by user");
-        } else if (error.message.includes("insufficient funds")) {
+        }
+        else if ((error.message).includes("User denied transaction signature")) {
+            console.log("Transaction rejected.");
+        }
+        else if ((error.message).includes("User rejected the transaction")) {
+            console.log("Transaction rejected.");
+        }
+        else if (error.message.includes("insufficient funds")) {
             await displayErrorMessage(`Error: Insuffient ETH to mint!`);
         } else {
             await displayErrorMessage(
